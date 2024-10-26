@@ -1,9 +1,12 @@
-start = document.getElementById("start");
-end = document.getElementById("end");
+let start = document.getElementById("start");
+let end = document.getElementById("end");
+let status = document.getElementById("status");
 
-boundaries = Array.from(document.getElementsByClassName("boundary"));
+let boundaries = Array.from(document.getElementsByClassName("boundary"));
 
-started = false;
+let started = false;
+
+console.log(status);
 
 function win() {
   alert("You Win!");
@@ -22,6 +25,9 @@ function startGame() {
     boundaries.forEach((boundary) => {
       boundary.addEventListener("mouseover", lose);
     });
+
+    document.getElementById("status").textContent =
+      "Game Started! Avoid The Walls!";
     started = true;
   }
 }
