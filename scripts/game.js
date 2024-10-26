@@ -1,12 +1,9 @@
 let start = document.getElementById("start");
 let end = document.getElementById("end");
 let status = document.getElementById("status");
-
 let boundaries = Array.from(document.getElementsByClassName("boundary"));
 
 let started = false;
-
-console.log(status);
 
 function win() {
   alert("You Win!");
